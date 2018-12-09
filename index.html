@@ -4,12 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>m10z1</title>
-    <link rel="stylesheet" href="vandor/normalize.css">
-    <link rel="stylesheet" href="vandor/flickity.min.css">    
+    <title>Seven Summits - The highest mountains of each of the seven continents</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="vendor/normalize.css">
+    <link rel="stylesheet" href="vendor/flickity.min.css">    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <script src="vandor/flickity.pkgd.min.js"></script>
+    <div class="main-wrapper">
+        <div class="main-carousel">
+            <div class="carousel-cell" id="carousel-cell1" style="background-image: url('images/mount-everest.jpg')">
+                <div class="container">
+                    <h3>Mount Everest (Asia) - 8848 m</h3>
+                </div>
+            </div>
+            <div class="carousel-cell" id="carousel-cell2" style="background-image: url('http://justfunfacts.com/wp-content/uploads/2017/02/aconcagua-2.jpg')">
+                <div class="container">
+                    <h3>Aconcagua (South America) - 6961 m</h3>
+                </div>
+            </div>
+            <div class="carousel-cell" id="carousel-cell3" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Every_Road-_Denali_%287945497984%29.jpg/284px-Every_Road-_Denali_%287945497984%29.jpg')">
+                <div class="container">
+                    <h3>Denali (North America) - 6144 m</h3>
+                </div>
+            </div>
+            <div class="carousel-cell" id="carousel-cell4" style="background-image: url('http://dalekoblisko.pl/wp-content/uploads/2018/04/Kili.jpg')">
+                <div class="container">
+                    <h3>Kilimanjaro (Africa) - 5895 m</h3>
+                </div>
+            </div>
+            <div class="carousel-cell" id="carousel-cell5" style="background-image: url('images/mount-everest.jpg')">
+                <div class="container">
+                    <h3>Elbrus (Europe) - 4741 m</h3>
+                </div>
+            </div>
+            <div class="carousel-cell" id="carousel-cell6" style="background-image: url('images/mount-everest.jpg')">
+                <div class="container">
+                    <h3>Mount Vinson (Antarctica) - 4892 m</h3>
+                </div>
+            </div>
+            <div class="carousel-cell" id="carousel-cell7" style="background-image: url('images/mount-everest.jpg')">
+                <div class="container">
+                    <h3>Mount Kosciuszko (Australia) - 2228 m</h3>
+                </div>
+            </div>
+        </div>
+        <div class="progress-bar"></div>
+        <button type="button" class="restart-button"><i class="fas fa-arrow-left"></i> Restart</button>
+    </div>
+    <script src="vendor/flickity.pkgd.min.js"></script>
+    <script src="vendor/hash.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
