@@ -4,6 +4,18 @@
   var progressBar = document.querySelector('.progress-bar');
   var restartButton = document.querySelector('.restart-button');
 
+  var carouselTemplate = document.querySelector('#cell-template').innerHTML;
+  var carouselDiv = document.querySelector('.main-carousel');
+
+  var carouselCells = '';
+
+  for (var i = 0; i < summitsList.length; i++) {
+    summitsList[i].number = i + 1;
+    carouselCells += Mustache.render(carouselTemplate, summitsList[i]);
+  }
+
+  carouselDiv.insertAdjacentHTML('beforeend', carouselCells);
+
   var flkty = new Flickity( elem, {
     cellAlign: 'center',
     contain: true,
@@ -19,6 +31,5 @@
   restartButton.addEventListener('click', function() {
     flkty.select(0);
   });
-
 
 })();

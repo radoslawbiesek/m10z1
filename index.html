@@ -13,47 +13,74 @@
 <body>
     <div class="main-wrapper">
         <div class="main-carousel">
-            <div class="carousel-cell" id="carousel-cell1" style="background-image: url('images/everest.jpg')">
-                <div class="container">
-                    <h3>Mount Everest (Asia, Nepal) - 8848 m</h3>
-                </div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell2" style="background-image: url('images/aconcagua.jpg')">
-                <div class="container">
-                    <h3>Aconcagua (South America, Argentina) - 6961 m</h3>
-                </div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell3" style="background-image: url('images/denali.jpg')">
-                <div class="container">
-                    <h3>Denali (North America, United States) - 6144 m</h3>
-                </div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell4" style="background-image: url('images/kilimanjaro.jpg')">
-                <div class="container">
-                    <h3>Kilimanjaro (Africa, Tanzania) - 5895 m</h3>
-                </div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell5" style="background-image: url('images/elbrus.jpg')">
-                <div class="container">
-                    <h3>Elbrus (Europe, Russia) - 5642 m</h3>
-                </div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell6" style="background-image: url('images/vinson.jpg')">
-                <div class="container">
-                    <h3>Mount Vinson (Antarctica) - 4892 m</h3>
-                </div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell7" style="background-image: url('images/jaya.jpg')">
-                <div class="container">
-                    <h3>Puncak Jaya (Australia, Indonesia) - 4884 m</h3>
-                </div>
-            </div>
+        <!-- Carousel cells are generating here -->
         </div>
         <div class="progress-bar"></div>
         <button type="button" class="restart-button"><i class="fas fa-arrow-left"></i> Restart</button>
     </div>
+    
+    <!-- Mustache  -->
+    <script id="cell-template">
+        <div class="carousel-cell" id="carousel-cell{{ number }}" style="background-image: url('{{ image }}')">
+            <div class="container">
+                <div class="overlay">
+                    <h3>{{ name }} - {{ height }}</h3>
+                    {{{ location }}}
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="summits-list">
+    var summitsList = [
+        {
+            name: 'Mount Everest',
+            height: '8848 m',
+            location: '<p>Asia, Nepal</p>',
+            image: 'images/everest.jpg',
+        },
+        {
+            name: 'Aconcagua',
+            height: '6961 m',
+            location: '<p>South America, Argentina</p>',
+            image: 'images/aconcagua.jpg',
+        },
+        {
+            name: 'Denali',
+            height: '6144 m',
+            location: '<p>North America, United States</p>',
+            image: 'images/denali.jpg',
+        },
+        {
+            name: 'Kilimanjaro',
+            height: '5895 m',
+            location: '<p>Africa, Tanzania</p>',
+            image: 'images/kilimanjaro.jpg',
+        },
+        {
+            name: 'Elbrus',
+            height: '5642 m',
+            location: '<p>Europe, Russia</p>',
+            image: 'images/elbrus.jpg',
+        },
+        {
+            name: 'Mount Vinson',
+            height: '4892 m',
+            location: '<p>Antarctica</p>',
+            image: 'images/vinson.jpg',
+        },
+        {
+            name: 'Puncak Jaya',
+            height: '4884 m',
+            location: '<p>Australia, Indonesia</p>',
+            image: 'images/jaya.jpg',
+        }
+    ];
+    </script>
+
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/hash.js"></script>
+    <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
