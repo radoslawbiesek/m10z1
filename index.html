@@ -14,9 +14,12 @@
     <div class="main-wrapper">
         <div class="main-carousel">
         <!-- Carousel cells are generating here -->
+           
         </div>
-        <div class="progress-bar"></div>
+        <div class="progress-bar"></div> 
         <button type="button" class="restart-button"><i class="fas fa-arrow-left"></i> Restart</button>
+        <!-- Map -->
+        <div id="map"></div>
     </div>
     
     <!-- Mustache  -->
@@ -38,42 +41,70 @@
             height: '8848 m',
             location: '<p>Asia, Nepal</p>',
             image: 'images/everest.jpg',
+            coords: {
+                lat: 27.9874519,
+                lng: 86.9230814,
+            },
         },
         {
             name: 'Aconcagua',
             height: '6961 m',
             location: '<p>South America, Argentina</p>',
             image: 'images/aconcagua.jpg',
+            coords: {
+                lat: -32.6531601,
+                lng: -70.0196437,
+            },
         },
         {
             name: 'Denali',
             height: '6144 m',
             location: '<p>North America, United States</p>',
             image: 'images/denali.jpg',
+            coords: {
+                lat: 63.0691779,
+                lng: -151.0157604,
+            },
         },
         {
             name: 'Kilimanjaro',
             height: '5895 m',
             location: '<p>Africa, Tanzania</p>',
             image: 'images/kilimanjaro.jpg',
+            coords: {
+                lat: -3.0674031,
+                lng: 37.3468511,
+            },
         },
         {
             name: 'Elbrus',
             height: '5642 m',
             location: '<p>Europe, Russia</p>',
             image: 'images/elbrus.jpg',
+            coords: {
+                lat: 43.3499529,
+                lng: 42.4365539,
+            },
         },
         {
             name: 'Mount Vinson',
             height: '4892 m',
             location: '<p>Antarctica</p>',
             image: 'images/vinson.jpg',
+            coords: {
+                lat: -78.63406,
+                lng: -85.2222654,
+            },
         },
         {
             name: 'Puncak Jaya',
             height: '4884 m',
             location: '<p>Australia, Indonesia</p>',
             image: 'images/jaya.jpg',
+            coords: {
+                lat: -4.0845771,
+                lng: 137.1778417,
+            },
         }
     ];
     </script>
@@ -82,5 +113,6 @@
     <script src="vendor/hash.js"></script>
     <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnmGTOza_f3-7YREHha33DtWNPcZQm0YU&callback=initMap"></script>
 </body>
 </html>

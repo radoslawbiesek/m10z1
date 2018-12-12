@@ -32,4 +32,23 @@
     flkty.select(0);
   });
 
+  // Init google map
+  window.initMap = function() {
+    // The map, centered at Summit from slide 1
+    var map = new google.maps.Map(
+      document.getElementById('map'), {
+        zoom: 6, 
+        center: summitsList[0].coords, 
+        mapTypeId: 'satellite'}
+      );
+      
+    // Markers for all summits
+    for (var i = 0; i < summitsList.length; i++) {
+      var marker = new google.maps.Marker({
+        position: summitsList[i].coords,
+        map: map,
+      });
+    }
+  }
+
 })();

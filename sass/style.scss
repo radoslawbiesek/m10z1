@@ -72,3 +72,7 @@ body {
         outline: none;
     }
 }
+#map {
+    width: 100%;
+    height: calc( 50vh - 5px );
+}

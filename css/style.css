@@ -88,4 +88,9 @@ body {
 .restart-button:active, .restart-button:focus {
   outline: none;
 }
+
+#map {
+  width: 100%;
+  height: calc( 50vh - 5px);
+}
 /*# sourceMappingURL=style.css.map */
