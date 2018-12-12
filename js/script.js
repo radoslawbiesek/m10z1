@@ -43,7 +43,8 @@
       );
       
     // Markers for all summits
-    for (var i = 0; i < summitsList.length; i++) {
+    var summitsListLength = summitsList.length;
+    for (var i = 0; i < summitsListLength; i++) {
       var marker = new google.maps.Marker({
         position: summitsList[i].coords,
         map: map,
