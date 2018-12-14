@@ -1,5 +1,5 @@
 'use strict';
-(function() {
+// (function() {
   var elem = document.querySelector('.main-carousel');
   var progressBar = document.querySelector('.progress-bar');
   var restartButton = document.querySelector('.restart-button');
@@ -39,8 +39,8 @@
       document.getElementById('map'), {
         zoom: 6, 
         center: summitsList[0].coords, 
-        mapTypeId: 'satellite'}
-      );
+        mapTypeId: 'satellite',
+      });
       
     // Markers for all summits
     var summitsListLength = summitsList.length;
@@ -48,8 +48,13 @@
       var marker = new google.maps.Marker({
         position: summitsList[i].coords,
         map: map,
+        title: summitsList[i].name,
+      });
+      
+      marker.addListener('click', function() {
+        flkty.select(i);
       });
     }
   }
 
-})();
+// })();

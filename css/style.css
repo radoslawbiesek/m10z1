@@ -1,96 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
-body {
-  font-family: 'Lato', sans-serif;
-  padding: 0;
-  margin: 0;
-  background-color: #eee;
-}
+body { font-family: 'Lato', sans-serif; padding: 0; margin: 0; background-color: #eee; }
 
-.main-wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
-  position: relative;
-}
+.main-wrapper { max-width: 1920px; margin: 0 auto; position: relative; }
 
-.carousel-cell {
-  width: 100%;
-  height: 50vh;
-  min-height: 250px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+.carousel-cell { width: 100%; height: 50vh; min-height: 250px; background-position: center; background-repeat: no-repeat; }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  -ms-flex-align: center;
-      align-items: center;
-}
+.container { max-width: 1200px; margin: 0 auto; height: 100%; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: end; justify-content: flex-end; -ms-flex-align: center; align-items: center; }
 
-.container .overlay {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 250px;
-  height: 50px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
+.container .overlay { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; background-color: rgba(0, 0, 0, 0.3); width: 250px; height: 50px; border-radius: 10px; margin-bottom: 20px; }
 
-.container h3, .container p {
-  margin: 0;
-  line-height: 1.2em;
-  color: #ddd;
-  text-shadow: 2px 2px 3px #000;
-}
+.container h3, .container p { margin: 0; line-height: 1.2em; color: #ddd; text-shadow: 2px 2px 3px #000; }
 
-.progress-bar {
-  height: 5px;
-  width: 0;
-  background: #aaa;
-}
+.progress-bar { height: 5px; width: 0; background: #aaa; }
 
-.restart-button {
-  position: absolute;
-  top: 2vh;
-  right: 2vw;
-  width: 100px;
-  height: 30px;
-  font-size: 13px;
-  border-radius: 10px;
-  border: none;
-  background-color: #eee;
-  cursor: pointer;
-  transition: 0.2s;
-}
+.restart-button { position: absolute; top: 2vh; right: 2vw; width: 100px; height: 30px; font-size: 13px; border-radius: 10px; border: none; background-color: #eee; cursor: pointer; transition: 0.2s; }
 
-.restart-button:hover {
-  background-color: #e1e1e1;
-}
+.restart-button:hover { background-color: #e1e1e1; }
 
-.restart-button:hover i {
-  transform: translateX(-5px);
-}
+.restart-button:hover i { transform: translateX(-5px); }
 
-.restart-button:active, .restart-button:focus {
-  outline: none;
-}
+.restart-button:active, .restart-button:focus { outline: none; }
 
-#map {
-  width: 100%;
-  height: calc( 50vh - 5px);
-}
-/*# sourceMappingURL=style.css.map */
+#map { width: 100%; height: calc( 50vh - 5px); }
