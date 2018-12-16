@@ -37,11 +37,17 @@
     // The map, centered at Summit from slide 1
     var map = new google.maps.Map(
       document.getElementById('map'), {
-        zoom: 6, 
+        zoom: 2, 
         center: summitsList[0].coords, 
         mapTypeId: 'satellite',
       });
-      
+     
+    function markerAddListener(marker, i) {
+      marker.addListener('click', function() {
+        flkty.select(i);
+      });
+
+    }
     // Markers for all summits
     var summitsListLength = summitsList.length;
     for (var i = 0; i < summitsListLength; i++) {
@@ -50,11 +56,12 @@
         map: map,
         title: summitsList[i].name,
       });
-      
-      marker.addListener('click', function() {
-        flkty.select(i);
-      });
+      markerAddListener(marker, i);
     }
+
+    flkty.on( 'change', function(i) {
+      map.panTo(summitsList[i].coords);
+    });
   }
 
 // })();
